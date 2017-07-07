@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Mar 23, 2017 10:43:43 AM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="model.Billing" table="billing" catalog="billing_db" optimistic-lock="version">
+        <id name="id" type="int">
+            <column name="id" />
+            <generator class="increment" />
+        </id>
+        <property name="tableId" type="int">
+            <column name="table_id" not-null="true" />
+        </property>
+        <property name="drinkCost" type="float">
+            <column name="drink_cost"/>
+        </property>
+        <property name="drinkCapital" type="float">
+            <column name="drink_capital"/>
+        </property>
+        <property name="foodCost" type="float">
+            <column name="food_cost"/>
+        </property>
+        <property name="foodCapital" type="float">
+            <column name="food_capital"/>
+        </property>
+        <property name="totalRevenue" type="float">
+            <column name="total_revenue"/>
+        </property>
+        <property name="totalCapital" type="float">
+            <column name="total_capital"/>
+        </property>
+        <property name="status" type="short">
+            <column name="status"/>
+        </property>
+        <property name="createdAt" type="timestamp">
+            <column name="created_at" length="19" />
+        </property>
+        <property name="updatedAt" type="timestamp">
+            <column name="updated_at" length="19" />
+        </property>
+        <property name="createdBy" type="string">
+            <column name="created_by" length="50" />
+        </property>
+        <property name="updatedBy" type="string">
+            <column name="updated_by" length="50" />
+        </property>
+    </class>
+</hibernate-mapping>
